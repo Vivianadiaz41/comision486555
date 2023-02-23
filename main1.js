@@ -1,5 +1,5 @@
 //clases
-class Producto {
+/*class Producto {
   constructor(id, nombre, precio, cantidad, descripcion) {
     this.id = id;
     this.nombre = nombre;
@@ -33,13 +33,35 @@ productos.push(
 );
 console.log(productos);
 //funcion
-function subtotal() {
+/*function subtotal() {
   for (const Producto of productos) {
     Producto.sumaIva();
     Producto.subtotal = Producto.precio * Producto.cantidad;
     Producto.vendido = true;
   }
 }
+Subtotal();
+console.log(subtotal);*/
 
-subtotal();
-console.log(subtotal);
+/*DOM*/
+let header = document.getElementById("LentesDesol");
+header.innerHTML = "<h2>lISTA DE PRECIOS</h2>";
+header.ClassName = "container row";
+/*ciclos dom*/
+let Tablas = document.getElementsByClassName("Tablas");
+let contenedores = document.getElementsByTagName("div");
+
+for (const Tabla of Tablas) {
+  console.log(Tablas.innerHTML);
+}
+
+for (const div of contenedores) {
+  console.log(div.innerHTML);
+}
+
+//Ciclo para recorrer las claves almacenadas en el objeto localStorage
+for (let i = 0; i < localStorage.length; i++) {
+  let clave = localStorage.key(i);
+  console.log("Clave: " + clave);
+  console.log("Valor: " + localStorage.getItem(clave));
+}
